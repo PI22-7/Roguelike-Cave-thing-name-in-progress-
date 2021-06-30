@@ -6,3 +6,5 @@
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 512.398, 298.267 )
+
+[editable path="Player"]

@@ -1,10 +1,37 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Floortile.tres" type="TileSet" id=2]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Walltile.tres" type="TileSet" id=2]
+[ext_resource path="res://Floortile.tres" type="TileSet" id=3]
+[ext_resource path="res://World.gd" type="Script" id=4]
 
 [node name="World" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 936.0
+margin_bottom = 496.0
+color = Color( 0.423529, 0.180392, 0.815686, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Floor" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 0
+collision_mask = 0
+format = 1
 
 [node name="Walls" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
+collision_mask = 6
 format = 1
+tile_data = PoolIntArray( -1441817, 1, 0, -1441816, 1, 0, -1441815, 1, 0, -1441814, 1, 0, -1376281, 1, 0, -1376278, 1, 0, -1310745, 1, 0, -1310742, 1, 0, -1245209, 1, 0, -1245206, 1, 0, -1179673, 1, 0, -1179670, 1, 0, -1114137, 1, 0, -1114134, 1, 0, -1048601, 1, 0, -1048598, 1, 0, -983068, 1, 0, -983067, 1, 0, -983066, 1, 0, -983065, 1, 0, -983062, 1, 0, -983061, 1, 0, -983060, 1, 0, -983059, 1, 0, -917532, 1, 0, -917529, 1, 0, -917526, 1, 0, -917523, 1, 0, -851996, 1, 0, -851993, 1, 0, -851990, 1, 0, -851987, 1, 0, -786460, 1, 0, -786459, 1, 0, -786458, 1, 0, -786457, 1, 0, -786456, 1, 0, -786455, 1, 0, -786454, 1, 0, -786453, 1, 0, -786452, 1, 0, -786451, 1, 0, 196630, 1, 0, 262166, 1, 0 )
+
+[node name="level" type="Node2D" parent="."]
+position = Vector2( 512, 300 )
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 512, 304 )

@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 50
+var speed = 0.8
 var tile_size = 16
 var corner = 1
 var last_position = Vector2()
@@ -15,7 +15,7 @@ func _ready():
 	
 func _process(delta):
 	
-	position += speed * move_dir * delta
+	position += speed * move_dir
 	
 	if position.distance_to(last_position) >= tile_size * corner - speed * delta:
 		position = target_position

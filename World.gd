@@ -1,6 +1,6 @@
 extends Node2D
 
-var tile = preload("res://FloorTileScene.tscn")
+var tile = preload("res://TileAssets//FloorTileScene.tscn")
 
 const dir = [Vector2.RIGHT, Vector2.LEFT, Vector2.UP, Vector2.DOWN]
 
@@ -38,3 +38,5 @@ func create_level():
 		
 		add_child(t)
 		grid.append(t)
+		
+

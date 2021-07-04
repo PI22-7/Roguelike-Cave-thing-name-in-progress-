@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="Basic Roguelike"
 run/main_scene="res://World.tscn"
-config/icon="res://icon.png"
+config/icon="res://Art/icon.png"
 
 [gdnative]
 

@@ -9,7 +9,7 @@ var move_dir = Vector2()
 var post_move = 0
 
 func _ready():
-	position = position.snapped(Vector2(24, 24))
+	position = position.snapped(Vector2(16, 16))
 	last_position = position
 	target_position = position
 	

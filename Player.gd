@@ -8,11 +8,12 @@ var inputs = {"ui_right": Vector2.RIGHT,
 
 func _ready():
 	position = position.snapped(Vector2.ONE * tile_size)
-	position += Vector2.ONE * tile_size/2
+	position += Vector2.ONE * tile_size / 2
+
 
 func _unhandled_input(event):
 	for dir in inputs.keys():
-		if Input.is_action_pressed(dir):
+		if event.is_action_pressed(dir):
 			move(dir)
 
 func move(dir):
